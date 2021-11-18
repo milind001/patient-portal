@@ -28,6 +28,7 @@ function SignUp(){
 
     const classes = useStyles();
     const [dob, setDOB] = useState(new Date());
+    let isValid = true;
 
     const [state, setState] = useState({
         firstname: "",
@@ -36,6 +37,8 @@ function SignUp(){
         mobile: "",
         password: ""
     });
+    const [confirmPassword, setConfirmPassword] = useState("");
+    const [errors, setError] = useState({});
 
     const handleChange = e => {
         const {id, value} = e.target;
@@ -43,6 +46,26 @@ function SignUp(){
             ...prevState,
             [id]: value
         }));
+    };
+
+    const handleValidation = () => {
+        const { password } = state;
+
+        if (typeof password !== "undefined" && typeof confirmPassword !== "undefined") {
+            if (password !== confirmPassword) {
+                isValid = false;
+                errors["password"] = "Passwords don't match.";
+            }
+        }
+        setError(errors);
+        return isValid;
+    };
+
+    const handlePasswordChange = (e) => {
+        setConfirmPassword(e.target.value);
+        if(handleValidation()){
+
+        }
     };
 
     const handleSubmit = e => {
@@ -149,6 +172,10 @@ function SignUp(){
                         placeholder="Confirm Password"
                         type="password"
                         className={classes.root}
+                        id="confirmPassword"
+                        onChange={handlePasswordChange}
+                        error={errors["password"] !== "" ?true:false}
+                        helperText={errors["password"]}
                     />
                     <Button className="signup-btn" variant="contained" type="submit" color="secondary">Register</Button>
 

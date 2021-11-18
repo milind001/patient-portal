@@ -1,0 +1,15 @@
+.side-menu-item-anch{
+    color: #25568f;
+    text-decoration: none;
+
+    .side-menu-item{
+        font-size: 17;
+        font-weight:500; 
+        letter-spacing: 0.5px;
+        transition: .2s;
+    }
+      
+    &:hover {
+        color: #000;
+    }
+}

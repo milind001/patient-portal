@@ -1,11 +1,12 @@
-import * as React from 'react';
+import React, { useState, useEffect } from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import AppRoutes from '../../routes/';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 
-import PATH from '../../resources/slugs'; 
+import axios from '../../resources/axios';
+import Spinner from '../../components/Spinner/Spinner' 
 import Header from '../../components/Header/Header';
 import Sidebar from '../../components/Sidebar/Sidebar';
 
@@ -13,57 +14,65 @@ const mdTheme = createTheme();
 
 const Layout = () => {
 
-    const [open, setOpen] = React.useState(true);
+    const [open, setOpen] = useState(true);
     const toggleDrawer = () => {
       setOpen(!open);
     };
+    const [menuRoutes, setMenuRoutes] = useState([]);
+    const accessRole = localStorage.getItem('role');
 
-    const menuItems = {
-        patient: [
-            { name: "Dashboard", link: PATH.dashboardp, icon: "../logo192.png" },
-            { name: "Demography", link: PATH.patientdemographics, icon: "../logo192.png" },
-            { name: "Patient Portal", link: PATH.patientportal, icon: "../logo192.png" }
-        ],
-        physician: [
-            { name: "Dashboard", link: PATH.dashboardp },
-            { name: "Appointments", link: PATH.dashboardp },
-            { name: "Profile", link: PATH.dashboardp },
-        ],
-        admin: [
-            { name: "Dashboard", link: PATH.dashboardp },
-            { name: "Patients", link: PATH.dashboardp },
-            { name: "Physicians", link: PATH.dashboardp },
-        ]
-    };
+    useEffect(() => {
+        axios.get('/sidemenu')
+        .then(res => {
+            // console.log(res.data[0]);
+            var role = {
+                '1': () => setMenuRoutes(res.data[0].patient_routes),
+                '2': () => setMenuRoutes(res.data[0].physician_routes),
+                '3': () => setMenuRoutes(res.data[0].admin_routes)
+            }
+            role[accessRole]()
+        })
+        .catch(err => {
+            console.log(err.message)
+        })
+    }, [accessRole]);
 
-    return(
-        <ThemeProvider theme={mdTheme}>
-            <Box sx={{ display: 'flex' }}>
-                <CssBaseline />
-                <Header 
-                    open={open} 
-                    toggleDrawer={toggleDrawer} />
-                <Sidebar
-                    open={open}
-                    toggleDrawer={toggleDrawer}
-                    menuItems={menuItems.patient} />
-                <Box
-                    component="main"
-                    sx={{
-                        backgroundColor: (theme) =>
-                        theme.palette.mode === 'light'
-                            ? theme.palette.grey[100]
-                            : theme.palette.grey[900],
-                        flexGrow: 1,
-                        height: '100vh',
-                        overflow: 'auto',
-                    }}>
-                    <Toolbar />
-                    <AppRoutes />
+    let check = "";
+
+    if(menuRoutes.length > 0) {
+        check = (
+            <ThemeProvider theme={mdTheme}>
+                <Box sx={{ display: 'flex' }}>
+                    <CssBaseline />
+                    <Header 
+                        open={open} 
+                        toggleDrawer={toggleDrawer} />
+                    <Sidebar
+                        open={open}
+                        toggleDrawer={toggleDrawer}
+                        menuItems={menuRoutes} />
+                    <Box
+                        component="main"
+                        sx={{
+                            backgroundColor: (theme) =>
+                            theme.palette.mode === 'light'
+                                ? theme.palette.grey[100]
+                                : theme.palette.grey[900],
+                            flexGrow: 1,
+                            height: '100vh',
+                            overflow: 'auto',
+                        }}>
+                        <Toolbar />
+                        <AppRoutes />
+                    </Box>
                 </Box>
-            </Box>
-        </ThemeProvider>
-    );
+            </ThemeProvider>
+        );
+    }else {
+        check = <Spinner/>;
+    }
+
+    return check
 };
 
 export default Layout;

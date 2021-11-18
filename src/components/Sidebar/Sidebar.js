@@ -10,6 +10,8 @@ import IconButton from '@mui/material/IconButton';
 import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
+import './sidebar.scss';
+import { DashboardRounded } from "@mui/icons-material";
 
 const drawerWidth = 240;
 
@@ -41,7 +43,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 
 const Sidebar = (props) => {
 
-    const {open, menuItems, toggleDrawer } = props;
+    const {open, menuItems = [], toggleDrawer } = props;
 
     return (
         <Drawer variant="permanent" open={open}>
@@ -58,14 +60,14 @@ const Sidebar = (props) => {
             </IconButton>
           </Toolbar>
           <Divider />
-            <List>
+            <List style={{ display:'flex',flexDirection: 'column'}}>
                 {menuItems.map(({name, link}, index) => (
-                <Link to={link} key={name}>
-                    <ListItem button>
-                    <ListItemIcon>
-                        icon
-                    </ListItemIcon>
-                    <ListItemText primary={name} />
+                <Link to={link} key={name} className="side-menu-item-anch">
+                    <ListItem className="side-menu-item">
+                      <ListItemIcon>
+                          <DashboardRounded/>
+                      </ListItemIcon>
+                      <ListItemText primary={name} />
                     </ListItem>
                 </Link>
                 ))}
