@@ -132,7 +132,7 @@ const PatientDemographics = () => {
         if (inputField.id) {
             editUserData(inputField)
         }
-        reset();
+        // reset();
 
     }
     const deleteUserData = (user) => {

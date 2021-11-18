@@ -31,8 +31,27 @@
       "id": 3
     }
   ],
-  "demographics": [],
+  "demographics": [
+    {
+      "firstname": "milind",
+      "lastname": "patil",
+      "ethinicity": "India",
+      "education": "BE",
+      "role": 1,
+      "dob": "2021-11-18T13:57:40.512Z",
+      "employment": "SE",
+      "phoneNo": "",
+      "medicalHistory": "",
+      "address": "",
+      "familyMedicalHistory": "",
+      "surgeries": "",
+      "insurenceProvider": "",
+      "id": 2
+    }
+  ],
   "allergis": [],
+  "medication": [],
+  "dignostics": [],
   "sidemenu": [
     {
       "patient_routes": [
