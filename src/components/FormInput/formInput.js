@@ -3,7 +3,6 @@ import './formInput.scss';
 
 const FormInput = (props) => {
     const { valueType, elementType, elementConfig, value, changed, invalid, shouldValidate, touched } = props;
-    console.log(props)
 
     let inputElement = null;
     const inputClasses = ['input__field'];
@@ -42,9 +41,9 @@ const FormInput = (props) => {
 
     return (
         <div className='group'>
-            <label class="input">
+            <label className="input">
             { inputElement }
-            <span class="input__label">{valueType}</span>
+            <span className="input__label">{valueType}</span>
             {validationError}
             </label>
         </div>

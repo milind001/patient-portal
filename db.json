@@ -49,9 +49,43 @@
       "id": 2
     }
   ],
-  "allergis": [],
-  "medication": [],
-  "dignostics": [],
+  "masterallergies": [
+   {
+     "id": "",
+     "code": "",
+     "allergyType": "",
+     "allergyName": "",
+     "allergySource": "",
+     "isoforms": "",
+     "allerginicity": ""
+   }
+  ],
+  "masterprocedurecodes": [
+    {
+      "id": "",
+      "code": "",
+      "description": ""
+    }
+  ],
+  "mastermedication": [
+    {
+      "id": "",
+      "applNo": "",
+      "form": "",
+      "strength": "",
+      "refDrug": "",
+      "drugName": "",
+      "drugIngrients": "",
+      "refeStandard": ""
+    }
+  ],
+  "masterdiagnoses": [
+    {
+      "id": "",
+      "code": "",
+      "description": ""
+    }
+  ],
   "sidemenu": [
     {
       "patient_routes": [
