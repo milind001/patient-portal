@@ -1,0 +1,117 @@
+:root {
+    --color-light: #25568f;
+    --color-dark: #212121;
+    --color-signal: #fff;
+    
+    --color-background: var(--color-light);
+    --color-text: var(--color-dark);
+    --color-accent: var(--color-signal);
+    
+    --size-bezel: .5rem;
+    --size-radius: 4px;
+}
+
+
+$sub-color: grey;
+$main-color: black;
+
+@mixin shrinkLabel {
+  top: -14px;
+  font-size: 12px;
+  color: $main-color;
+}
+
+.group {
+    margin: 15px 0;
+    .input {
+        position: relative;
+        
+        &__label {
+          position: absolute;
+          left: 0;
+          top: 0;
+          padding: calc(var(--size-bezel) * 0.75) calc(var(--size-bezel) * .5);
+          margin: calc(var(--size-bezel) * 0.75) calc(var(--size-bezel) * .5);
+          background: pink;
+          white-space: nowrap;
+          transform: translate(0, 0);
+          transform-origin: 0 0;
+          background: var(--color-background);
+          transition: transform 120ms ease-in;
+          line-height: 1.2;
+          font-size: 14px;
+        }
+        &__field {
+          box-sizing: border-box;
+          display: block;
+          width: 100%;
+          border: 1px solid currentColor;
+          padding: calc(var(--size-bezel) * 1.5) var(--size-bezel);
+          color: currentColor;
+          background: transparent;
+          border-radius: var(--size-radius);
+          
+          &:focus,
+          &:not(:placeholder-shown) {
+            & + .input__label {
+              transform: translate(.25rem, -65%) scale(.8);
+              color: var(--color-accent);
+            }
+          }
+        }
+      }
+
+
+    // position: relative;
+    // margin: 45px 0;
+  
+    // .form-input {
+    //   background: none;
+    //   background-color: white;
+    //   color: $sub-color;
+    //   font-size: 18px;
+    //   padding: 10px 10px 10px 5px;
+    //   display: block;
+    //   width: 100%;
+    //   border: none;
+    //   border-radius: 0;
+    //   border-bottom: 1px solid $sub-color;
+    //   // margin: 25px 0;
+  
+    //   &:focus {
+    //     outline: none;
+    //   }
+  
+    //   &:focus ~ .form-input-label {
+    //     @include shrinkLabel();
+    //   }
+    // }
+  
+    // .form-input-label {
+    //   color: $sub-color;
+    //   font-size: 16px;
+    //   font-weight: normal;
+    //   position: absolute;
+    //   pointer-events: none;
+    //   left: 5px;
+    //   top: 10px;
+    //   transition: 300ms ease all;
+  
+    //   &.shrink {
+    //     @include shrinkLabel();
+    //   }
+    // }
+
+    .invalid {
+        color: red;
+        border-bottom: 1px solid red;
+        // background-color: #FDA49A;
+    }
+    
+    .validation-error {
+        color: red;
+        font-size: 15px;
+        height: 30px;
+    } 
+  }
+
