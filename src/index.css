@@ -5,9 +5,40 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.main-container-1{
+  padding: 1rem 1.5rem;
+}
+.headerMenu{
+  color: #ffffff;
+}
+.addData{
+  background-color: #25568f!important;
+  color: #ffffff!important;
+  float: right;
+}
+.commonTable{
+box-shadow: 0 1px 4px #ccc;
+margin-top: 3rem;
+}
+.commonTable td,th{
+  padding: 8px!important;
+}
+.commonTable th{
+  font-weight: 600;
+}
+.MuiDialog-paperWidthSm{
+  max-width: 1000px!important;
+}
+.closeModal{
+  float: right;
+  cursor: pointer;
+}
+

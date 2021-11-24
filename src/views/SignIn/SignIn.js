@@ -28,34 +28,9 @@ import './signin.scss'
 
 function SignIn(){
 
-  //submit form
-  // const handleSubmit = e => {
-  //   e.preventDefault();
-  //   if(handleValidation()){
-  //     const { username, password } = state;
-  //     axios.post('/login', {email: username, password: password})
-  //       .then(res => {
-  //           // console.log(res.data)
-  //           localStorage.setItem('token', res.data.accessToken);
-  //           localStorage.setItem('email', res.data.user.email);
-  //           localStorage.setItem('role', res.data.user.role);
-  //           history.push('/dashboard');
-  //       })
-  //       .catch(err => {
-  //           console.error(
-  //               `Error! in login ${err.message}`
-  //           );
-  //       })
-  //   }
-  // };
-
-  // const classes = useStyles();
-
   const dispatch = useDispatch();
 
-
-  const [authForm, setAuthForm] = useState({
-    
+  const [authForm, setAuthForm] = useState({   
     email: {
         elementType: 'input',
         elementConfig: {
@@ -99,9 +74,9 @@ const inputChangedHandler = (event, controlName) => {
     setAuthForm(updatedControl);
 }
 
+//submit form
 const submitHandler = e => {
     e.preventDefault();
-    // console.log(authForm)
     dispatch(actions.signin(authForm.email.value, authForm.password.value));
 };
 
@@ -111,7 +86,7 @@ for( let key in authForm ) {
         id: key,
         config: authForm[key]
     });
-}
+};
 
 let form = formElementsArray.map( formElement => (
   <FormInput 

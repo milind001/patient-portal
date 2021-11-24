@@ -7,6 +7,7 @@ import NotFound from './views/NotFound404';
 import { Route, Switch } from "react-router";
 import Spinner from "./components/Spinner/Spinner";
 import ProtectedRoute from "./routes/ProtectedRoute";
+import {NotificationContainer} from 'react-notifications';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <ProtectedRoute path="/dashboard" component={Layout}/>
             <Route path="*" component={NotFound} />
         </Switch>
+        <NotificationContainer/>
       </Suspense>
   );
 };

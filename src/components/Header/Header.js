@@ -11,7 +11,8 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import Box from '@mui/material/Box';
-import { useHistory } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import * as actions from '../../store/action';
 
 const drawerWidth = 240;
 
@@ -38,7 +39,6 @@ const  Header = (props) => {
     const {open, toggleDrawer} = props;
     const [anchorEl, setAnchorEl] = useState(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState(null);
-    let history = useHistory();
   
     const isMenuOpen = Boolean(anchorEl);
   
@@ -55,9 +55,9 @@ const  Header = (props) => {
       handleMobileMenuClose();
     };
 
+    const dispatch = useDispatch();
     const authLogout = () => {
-        localStorage.clear();
-        history.push('/');
+        dispatch(actions.authLogout());
     };
    
     const menuId = 'primary-search-account-menu';
@@ -91,41 +91,41 @@ const  Header = (props) => {
         }}
         >
         <IconButton
+            className="headerMenu"
             edge="start"
-            color="inherit"
             aria-label="open drawer"
             onClick={toggleDrawer}
             sx={{
             marginRight: '36px',
             ...(open && { display: 'none' }),
             }}>
-            <MenuIcon />
+            <MenuIcon className="headerMenu" />
         </IconButton>
         <Typography
+            className="headerMenu"
             component="h1"
             variant="h6"
-            color="inherit"
             noWrap
             sx={{ flexGrow: 1 }}
         >
             Dashboard
         </Typography>
-        <IconButton color="inherit">
-            <Badge badgeContent={4} color="secondary">
+        <IconButton className="headerMenu">
+            <Badge className="headerMenu" badgeContent={4} color="secondary">
             <Notifications />
             </Badge>
         </IconButton>        
         <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             <IconButton
+              className="headerMenu"
               size="large"
               edge="end"
               aria-label="account of current user"
               aria-controls={menuId}
               aria-haspopup="true"
               onClick={handleProfileMenuOpen}
-              color="inherit"
             >
-              <AccountCircle />
+              <AccountCircle className="headerMenu" />
             </IconButton>
         </Box>
         {renderMenu}
