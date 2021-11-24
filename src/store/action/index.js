@@ -6,5 +6,6 @@ export {
 export {
     phySaveDemographicData,
     phyFetchDemographicData,
-    phyEditDemographicData
+    phyEditDemographicData,
+    phyDeleteDemographicData
 } from './phy-lists';

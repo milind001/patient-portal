@@ -59,7 +59,7 @@ export const phySaveDemographicData = (phySaveData) => {
 };
 
 export const phyEditDemographicData = (userId, userData) => {
-    console.log('edit action')
+    // console.log('edit action')
     return dispatch => {
         dispatch(phyStart());
         axios.put('/demographics/' + userId, userData)
@@ -67,6 +67,21 @@ export const phyEditDemographicData = (userId, userData) => {
             dispatch(phyEditSuccess());
             dispatch(phyFetchDemographicData());
            
+        })
+        .catch(err => {
+            dispatch(phyFail(err));
+        })
+    }
+};
+
+export const phyDeleteDemographicData = (userID) => {
+    // console.log('edit action')
+    return dispatch => {
+        dispatch(phyStart());
+        axios.delete('/demographics/' + userID)
+        .then(res => {
+            dispatch(phyFetchDemographicData());
+            NotificationManager.success("User Deleted Successfully");
         })
         .catch(err => {
             dispatch(phyFail(err));

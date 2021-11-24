@@ -1,5 +1,7 @@
 import { Button } from "@material-ui/core"
 import axios from '../../resources/axios';
+import { useDispatch } from 'react-redux';
+import * as actions from '../../store/action';
 import { NotificationManager } from "react-notifications";
 import * as React from 'react';
 import Dialog from '@material-ui/core/Dialog';
@@ -8,16 +10,16 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 
 const DeleteModal = ({ userID }) => {
-    console.log("data is", userID);
+
+    const dispatch = useDispatch();
     const [open, setOpen] = React.useState(true);
    
     const handleClose = () => {
-        setOpen(false);
+        setOpen(!open);
     };
 
     const deleteUserData = (userID) => {
-        axios.delete('/demographics' + '/' + userID)
-        NotificationManager.success("User Deleted Successfully");
+        dispatch(actions.phyDeleteDemographicData(userID))
     }
     
     return (
