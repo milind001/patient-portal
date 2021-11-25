@@ -1,4 +1,6 @@
 import React, { Suspense } from "react";
+import {useEffect} from 'react';
+import {connectWithWebSocket} from './utils/wssConnection/wssConnection';
 import Layout from './views/layout/Layout';
 import SignIn from './views/SignIn/SignIn';
 import SignUp from './views/SignUp/Signup';
@@ -10,6 +12,9 @@ import ProtectedRoute from "./routes/ProtectedRoute";
 import {NotificationContainer} from 'react-notifications';
 
 function App() {
+  useEffect(() => {
+    connectWithWebSocket();
+  },[]);
   return (
       <Suspense fallback={<Spinner/>}>
         <Switch>

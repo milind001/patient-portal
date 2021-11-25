@@ -15,6 +15,8 @@ code {
 }
 .main-container-1{
   padding: 1rem 1.5rem;
+  background-color: #fff;
+  /* height: 100%; */
 }
 .headerMenu{
   color: #ffffff;
@@ -40,5 +42,83 @@ margin-top: 3rem;
 .closeModal{
   float: right;
   cursor: pointer;
+
+}
+.commonModal{
+  
+}
+.commonModal .modalHeader{
+  padding: 1rem;
 }
 
+
+.MuiInputBase-root{
+  height: 40px;
+  margin-bottom: 0.5rem;
+}
+.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: #ccc!important;
+}
+.modalBody{
+  padding: 1rem;
+}
+.MuiFormLabel-root{
+  font-size: 14px;
+}
+.MuiInputBase-input {
+  font-size: 14px!important;
+}
+textarea{
+  height: 51px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+}
+.MuiFormLabel-root{
+  font-size: 14px!important;
+}
+.buttomWrapper button{
+  float: right;
+  margin: 0 10px;
+}
+
+.card{
+
+  box-shadow: 0 2px 8px #ccc;
+
+  border-radius: 8px;
+
+  padding: 1rem;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  flex-direction: column;
+
+
+
+}
+
+.cardTitle{
+
+  font-size: 18px;
+
+  margin: 0;
+
+}
+
+.count{
+
+  font-size: 40px;
+
+    margin: 0;
+
+    color: #25568f;
+
+    font-weight: bold;
+
+}

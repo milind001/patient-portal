@@ -64,7 +64,7 @@ const Sidebar = (props) => {
                 {menuItems.map(({name, link}, index) => (
                 <Link to={link} key={name} className="side-menu-item-anch">
                     <ListItem className="side-menu-item">
-                      <ListItemIcon>
+                      <ListItemIcon style={{minWidth: '35px'}}>
                           <DashboardRounded/>
                       </ListItemIcon>
                       <ListItemText primary={name} />

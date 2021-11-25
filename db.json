@@ -1,233 +1,442 @@
 {
   "users": [
     {
-      "email": "milind@test.com",
+      "email": "admin@test.com",
       "password": "$2a$10$TOsrFiooPdHpN1.qtshyNuZWKUcbLJjbZRPjleGQGgQ/Fp2Klk1Rm",
       "firstname": "milind",
       "lastname": "patil",
       "mobile": "9035366875",
       "dob": "1995-10-10T10:36:00.000Z",
-      "role": 3,
+      "role": 2,
       "id": 1
     },
     {
-      "email": "abhishek@test.com",
-      "password": "$2a$10$brIDIVeJpkpgTEuydS/mQuXOxmF7.NV5VZw6oFaO7NRe3BMkXKwEK",
-      "firstname": "Abhishek",
-      "lastname": "A",
-      "mobile": "87545545455",
-      "dob": "2012-11-13T10:39:00.000Z",
-      "role": 1,
+      "email": "patient@gmail.com",
+      "password": "$2a$10$ugMQxm2kKTA2aAQcSGTvQOWP8BBsrcTG0C6uq2rd1EM4V53Sr3.Ey",
+      "firstname": "test",
+      "lastname": "test",
+      "mobile": "999999",
+      "dob": "2021-11-25T07:18:55.366Z",
+      "role": "1",
       "id": 2
     },
     {
+      "email": "phy@test.com",
+      "password": "$2a$10$f1bwHrm7o.Eh7IxLfJbl/O9J84QSauK28quZ5W2HIR.2QVqfKVZcm",
+      "firstname": "abhi",
+      "lastname": "A",
+      "mobile": "8965464654",
+      "dob": "2021-11-25T07:29:23.857Z",
+      "role": 2,
+      "id": 3
+    },
+    {
+      "email": "panshul@gmail.com",
+      "password": "$2a$10$xSic5ToW7oufYAnWh3nZCe51v4nUAm54fiNmcHRksG1iVBBPkg06u",
+      "firstname": "panshul",
+      "lastname": "T",
+      "mobile": "7984651320",
+      "dob": "2021-11-25T11:08:30.392Z",
+      "role": 1,
+      "id": 4
+    },
+    {
+      "email": "vin@gmail.com",
+      "password": "$2a$10$2L43pSaUHYpFb.5XmmGbrOegaHd2DmVPEmxEdjeKlprFEa4a5xlm6",
+      "firstname": "vin",
+      "lastname": "patil",
+      "mobile": "",
+      "dob": "2021-11-25T11:49:19.919Z",
+      "role": 1,
+      "id": 5
+    },
+    {
       "email": "test@gmail.com",
-      "password": "$2a$10$8CRPlIhkvc3qDNcJCsaHgu4NanwqhtjEKPttZrdk/lFZnfnnsievW",
+      "password": "$2a$10$skaA..wNqzxELiYV8MP70ubOeIMgXMPKVvZbnABNcG6kfVvgdudYS",
       "firstname": "test",
       "lastname": "test",
-      "mobile": "22342342343",
-      "dob": "2021-11-02T05:29:00.000Z",
-      "role": 1,
-      "id": 3
+      "mobile": "798564321",
+      "dob": "2021-11-08T12:19:00.000Z",
+      "role": "2",
+      "id": 6
     }
   ],
   "demographics": [
     {
-      "firstname": "milind",
-      "lastname": "patil",
+      "firstname": "panshul",
+      "lastname": "A",
       "ethinicity": "India",
       "education": "BE",
       "role": 1,
-      "dob": "2021-11-18T13:57:40.512Z",
-      "employment": "SE",
-      "phoneNo": "",
+      "dob": "2021-11-25T11:09:52.082Z",
+      "employment": "DEV",
+      "phoneNo": "6546513232311",
       "medicalHistory": "",
-      "address": "",
+      "address": "Test",
       "familyMedicalHistory": "",
       "surgeries": "",
       "insurenceProvider": "",
-      "id": 2
-    },
-    {
-      "firstname": "yesha",
-      "lastname": "Jain",
-      "ethinicity": "Jain M",
-      "education": "BE",
-      "role": 1,
-      "dob": "2021-11-24T05:35:43.002Z",
-      "employment": "Testing",
-      "phoneNo": "",
-      "medicalHistory": "",
-      "address": "",
-      "familyMedicalHistory": "",
-      "surgeries": "",
-      "insurenceProvider": "",
-      "id": 6
-    },
-    {
-      "firstname": "Darshana",
-      "lastname": "K",
-      "ethinicity": "M",
-      "education": "BE",
-      "role": 1,
-      "dob": "2021-11-24T05:45:09.449Z",
-      "employment": "DE",
-      "phoneNo": "",
-      "medicalHistory": "",
-      "address": "",
-      "familyMedicalHistory": "",
-      "surgeries": "",
-      "insurenceProvider": "",
-      "id": 7
-    },
-    {
-      "firstname": "Vinayak",
-      "lastname": "patil",
-      "ethinicity": "M",
-      "education": "BCOM",
-      "role": 1,
-      "dob": "2021-11-24T07:28:49.475Z",
-      "employment": "B",
-      "phoneNo": "",
-      "medicalHistory": "",
-      "address": "",
-      "familyMedicalHistory": "",
-      "surgeries": "",
-      "insurenceProvider": "",
-      "id": 8
-    },
-    {
-      "firstname": "Meheboob",
-      "lastname": "attar",
-      "ethinicity": "India",
-      "education": "BE",
-      "role": 1,
-      "dob": "2021-11-24T07:45:16.677Z",
-      "employment": "",
-      "phoneNo": "",
-      "medicalHistory": "",
-      "address": "",
-      "familyMedicalHistory": "",
-      "surgeries": "",
-      "insurenceProvider": "",
-      "id": 9
-    },
-    {
-      "firstname": "Omkar",
-      "lastname": "Pawar",
-      "ethinicity": "India",
-      "education": "CSE",
-      "role": 1,
-      "dob": "2021-11-24T07:46:25.310Z",
-      "employment": "",
-      "phoneNo": "",
-      "medicalHistory": "",
-      "address": "",
-      "familyMedicalHistory": "",
-      "surgeries": "",
-      "insurenceProvider": "",
-      "id": 10
-    },
-    {
-      "firstname": "BAC",
-      "lastname": "c",
-      "ethinicity": "C",
-      "education": "C",
-      "role": 1,
-      "dob": "2021-11-24T08:08:32.203Z",
-      "employment": "",
-      "phoneNo": "",
-      "medicalHistory": "",
-      "address": "",
-      "familyMedicalHistory": "",
-      "surgeries": "",
-      "insurenceProvider": "",
-      "id": 11
-    },
-    {
-      "firstname": "JK",
-      "lastname": "super",
-      "ethinicity": "M",
-      "education": "BE",
-      "role": 1,
-      "dob": "2021-11-24T08:15:47.977Z",
-      "employment": "Testing",
-      "phoneNo": "",
-      "medicalHistory": "",
-      "address": "",
-      "familyMedicalHistory": "",
-      "surgeries": "",
-      "insurenceProvider": "",
-      "id": 12
-    },
-    {
-      "firstname": "testc",
-      "lastname": "22",
-      "ethinicity": "M",
-      "education": "sfd",
-      "role": 1,
-      "dob": "2021-11-24T08:18:58.376Z",
-      "employment": "",
-      "phoneNo": "",
-      "medicalHistory": "",
-      "address": "",
-      "familyMedicalHistory": "",
-      "surgeries": "",
-      "insurenceProvider": "",
-      "id": 13
-    },
-    {
-      "firstname": "jacky",
-      "lastname": "j",
-      "ethinicity": "",
-      "education": "",
-      "role": 1,
-      "dob": "2021-11-24T11:59:48.171Z",
-      "employment": "",
-      "phoneNo": "",
-      "medicalHistory": "",
-      "address": "",
-      "familyMedicalHistory": "",
-      "surgeries": "",
-      "insurenceProvider": "",
-      "id": 14
+      "id": 1
     }
   ],
   "masterallergies": [
     {
-      "id": "",
-      "code": "",
-      "allergyType": "",
-      "allergyName": "",
-      "allergySource": "",
-      "isoforms": "",
-      "allerginicity": ""
+      "id": "1",
+      "code": "ab1",
+      "allergyType": "Animal",
+      "title": "Dog",
+      "allergySource": "Bos taurus",
+      "isoforms": "Bos Bos d 3",
+      "allerginicity": "IgE but no biological test"
+    },
+    {
+      "id": "2",
+      "code": "ab2",
+      "allergyType": "Animal",
+      "title": "Cat",
+      "allergySource": "Bos taurus",
+      "isoforms": "Bos Bos d 3",
+      "allerginicity": "IgE but no biological test"
+    },
+    {
+      "id": "3",
+      "code": "ab3",
+      "allergyType": "Grains",
+      "title": "wheat",
+      "allergySource": "Bos taurus",
+      "isoforms": "Bos Bos d 3",
+      "allerginicity": "IgE but no biological test"
+    },
+    {
+      "id": "4",
+      "code": "ab4",
+      "allergyType": "Nuts",
+      "title": "Peanuts",
+      "allergySource": "Bos taurus",
+      "isoforms": "Bos Bos d 3",
+      "allerginicity": "IgE but no biological test"
+    },
+    {
+      "code": "123",
+      "allergyType": "Test",
+      "allergyName": "Test",
+      "socialDurgs": "test",
+      "allergySource": "NA",
+      "isoforms": "NA",
+      "allerginicity": "NA",
+      "id": "J-H_qWc"
     }
   ],
   "masterprocedurecodes": [
     {
-      "id": "",
-      "code": "",
-      "description": ""
+      "code": "1",
+      "description": "a",
+      "id": 1
     }
   ],
   "mastermedication": [
     {
-      "id": "",
-      "applNo": "",
-      "form": "",
-      "strength": "",
-      "refDrug": "",
-      "drugName": "",
-      "drugIngrients": "",
-      "refeStandard": ""
+      "id": "1",
+      "applNo": "000004",
+      "form": "SOLUTION/DROPS;OPHTHALMIC",
+      "strength": "1%",
+      "refDrug": "PAREDRINE",
+      "title": "Paredrine",
+      "drugIngrients": "HYDROXYAMPHETAMINE HYDROBROMIDE",
+      "refeStandard": "001"
+    },
+    {
+      "id": "2",
+      "applNo": "000004",
+      "form": "SOLUTION/DROPS;OPHTHALMIC",
+      "strength": "1%",
+      "refDrug": "PAREDRINE",
+      "title": "Azithromycin",
+      "drugIngrients": "HYDROXYAMPHETAMINE HYDROBROMIDE",
+      "refeStandard": "001"
+    },
+    {
+      "id": "3",
+      "applNo": "000004",
+      "form": "SOLUTION/DROPS;OPHTHALMIC",
+      "strength": "1%",
+      "refDrug": "PAREDRINE",
+      "title": "Combiflam",
+      "drugIngrients": "HYDROXYAMPHETAMINE HYDROBROMIDE",
+      "refeStandard": "001"
+    },
+    {
+      "id": "4",
+      "applNo": "000004",
+      "form": "SOLUTION/DROPS;OPHTHALMIC",
+      "strength": "1%",
+      "refDrug": "PAREDRINE",
+      "title": "Disprin",
+      "drugIngrients": "HYDROXYAMPHETAMINE HYDROBROMIDE",
+      "refeStandard": "001"
     }
   ],
   "masterdiagnoses": [
     {
-      "id": "",
-      "code": "",
-      "description": ""
+      "id": "1",
+      "code": "abc",
+      "description": "Blood Test"
+    },
+    {
+      "id": "2",
+      "code": "abc",
+      "description": "ECG Test"
+    },
+    {
+      "id": "3",
+      "code": "abc",
+      "description": "Heamoglobin Test"
+    },
+    {
+      "id": "4",
+      "code": "abc",
+      "description": "Thyroid Test"
+    }
+  ],
+  "masterspeciality": [
+    {
+      "id": "1",
+      "title": "Orthopaedics"
+    },
+    {
+      "id": "2",
+      "title": "Gynaecologist"
+    },
+    {
+      "id": "3",
+      "title": "Radiologist"
+    },
+    {
+      "id": "4",
+      "title": "Neurologist"
+    },
+    {
+      "id": "5",
+      "title": "Anesthesiologists"
+    },
+    {
+      "id": "6",
+      "title": "Emergency"
+    }
+  ],
+  "appointments": [
+    {
+      "user_id": "6",
+      "selectspeciality": "Gynaecologist",
+      "selectphysician": [
+        {
+          "email": "admin@test.com",
+          "password": "$2a$10$TOsrFiooPdHpN1.qtshyNuZWKUcbLJjbZRPjleGQGgQ/Fp2Klk1Rm",
+          "firstname": "milind",
+          "lastname": "patil",
+          "mobile": "9035366875",
+          "dob": "1995-10-10T10:36:00.000Z",
+          "role": 3,
+          "id": 1
+        },
+        {
+          "email": "patient@gmail.com",
+          "password": "$2a$10$ugMQxm2kKTA2aAQcSGTvQOWP8BBsrcTG0C6uq2rd1EM4V53Sr3.Ey",
+          "firstname": "test",
+          "lastname": "test",
+          "mobile": "999999",
+          "dob": "2021-11-25T07:18:55.366Z",
+          "role": "1",
+          "id": 2
+        },
+        {
+          "email": "phy@test.com",
+          "password": "$2a$10$f1bwHrm7o.Eh7IxLfJbl/O9J84QSauK28quZ5W2HIR.2QVqfKVZcm",
+          "firstname": "abhi",
+          "lastname": "A",
+          "mobile": "8965464654",
+          "dob": "2021-11-25T07:29:23.857Z",
+          "role": 2,
+          "id": 3
+        },
+        {
+          "email": "panshul@gmail.com",
+          "password": "$2a$10$xSic5ToW7oufYAnWh3nZCe51v4nUAm54fiNmcHRksG1iVBBPkg06u",
+          "firstname": "panshul",
+          "lastname": "T",
+          "mobile": "7984651320",
+          "dob": "2021-11-25T11:08:30.392Z",
+          "role": 1,
+          "id": 4
+        },
+        {
+          "email": "vin@gmail.com",
+          "password": "$2a$10$2L43pSaUHYpFb.5XmmGbrOegaHd2DmVPEmxEdjeKlprFEa4a5xlm6",
+          "firstname": "vin",
+          "lastname": "patil",
+          "mobile": "",
+          "dob": "2021-11-25T11:49:19.919Z",
+          "role": 1,
+          "id": 5
+        },
+        {
+          "email": "test@gmail.com",
+          "password": "$2a$10$O6icFRRmHc.YskUcwwIlWusKTwt6Tn.HvXMj2Jm9PlDpzdzXOV69u",
+          "firstname": "test",
+          "lastname": "test",
+          "mobile": "798564321",
+          "dob": "2021-11-08T12:19:00.000Z",
+          "role": 1,
+          "id": 6
+        }
+      ],
+      "physician_id": "Dr. Rahul",
+      "scheduletime": "Thu, 25 Nov 2021 21:30:00 GMT",
+      "method": "1",
+      "paymentmethod": "Cash Only",
+      "id": 1
+    }
+  ],
+  "method": [
+    {
+      "id": "1",
+      "title": "Face To Face"
+    },
+    {
+      "id": "2",
+      "title": "Video Consultation"
+    }
+  ],
+  "paymentmethod": [
+    {
+      "id": "1",
+      "title": "Online Payment"
+    },
+    {
+      "id": "2",
+      "title": "Cash Only"
+    }
+  ],
+  "masterphysician": [
+    {
+      "id": "1",
+      "speciality_id": "1",
+      "user_id": "",
+      "title": "Dr. John"
+    },
+    {
+      "id": "1",
+      "speciality_id": "1",
+      "user_id": "",
+      "title": "Dr. Rahul"
+    },
+    {
+      "id": "1",
+      "speciality_id": "1",
+      "user_id": "",
+      "title": "Dr.Milind"
+    }
+  ],
+  "patient-medication2": [
+    {
+      "currentMedication": "Paredrine",
+      "otcMedication": "Disprin",
+      "herbs": "NA",
+      "socialDrugs": "NA",
+      "drugAllergies": "Dog",
+      "otherAllergies": "Peanuts",
+      "id": 1
+    },
+    {
+      "currentMedication": "Azithromycin",
+      "otcMedication": "Combiflam",
+      "herbs": "NA",
+      "socialDrugs": "NA",
+      "drugAllergies": "Dog",
+      "otherAllergies": "Peanuts",
+      "id": 2
+    },
+    {
+      "currentMedication": "Disprin",
+      "otcMedication": "NA",
+      "herbs": "NA",
+      "socialDrugs": "NA",
+      "drugAllergies": "",
+      "otherAllergies": "NA",
+      "id": 3
+    },
+    {
+      "currentMedication": "NA",
+      "otcMedication": "",
+      "herbs": "",
+      "socialDrugs": "",
+      "drugAllergies": "",
+      "otherAllergies": "",
+      "id": 4
+    },
+    {
+      "currentMedication": "",
+      "otcMedication": "",
+      "herbs": "",
+      "socialDrugs": "",
+      "drugAllergies": "NA",
+      "otherAllergies": "NA",
+      "id": 5
+    },
+    {
+      "currentMedication": "Paredrine",
+      "otcMedication": "Azithromycin",
+      "herbs": "NA",
+      "socialDrugs": "NA",
+      "drugAllergies": "Dog",
+      "otherAllergies": "NA",
+      "id": 6
+    },
+    {
+      "currentMedication": "Disprin",
+      "otcMedication": "Disprin",
+      "herbs": "NA",
+      "socialDrugs": "NA",
+      "drugAllergies": "NA",
+      "otherAllergies": "NA",
+      "patient_user_id": "3",
+      "id": 7
+    },
+    {
+      "currentMedication": "Paredrine",
+      "otcMedication": "Paredrine",
+      "herbs": "NA",
+      "socialDrugs": "NA",
+      "drugAllergies": "NA",
+      "otherAllergies": "NA",
+      "patient_user_id": "3",
+      "id": 8
+    },
+    {
+      "currentMedication": "Paredrine",
+      "otcMedication": "Azithromycin",
+      "herbs": "NA",
+      "socialDrugs": "NA",
+      "drugAllergies": "Cat",
+      "otherAllergies": "Dog",
+      "patient_user_id": "4",
+      "id": 9
+    }
+  ],
+  "paymenthistory": [
+    {
+      "id": "1",
+      "user_id": "1",
+      "date": "2021-11-26T18:39:36.000Z",
+      "appoinment_id": "1",
+      "amount": "450"
+    },
+    {
+      "id": "2",
+      "user_id": "1",
+      "date": "2021-11-26T18:39:36.000Z",
+      "appoinment_id": "2",
+      "amount": "450"
     }
   ],
   "sidemenu": [
@@ -242,19 +451,79 @@
           "name": "Patient Demographics",
           "link": "/dashboard/patient/demographics",
           "icon": "../logo192.png"
+        },
+        {
+          "name": "Patient Medication",
+          "link": "/dashboard/patient/patient-medication2",
+          "icon": "../logo192.png"
+        },
+        {
+          "name": "Schedule Appoinments",
+          "link": "/dashboard/patient/schedule-appoinments",
+          "icon": "../logo192.png"
+        },
+        {
+          "name": "Scheduled Appoinment",
+          "link": "/dashboard/patient/appoinments-scheduled",
+          "icon": "../logo192.png"
+        },
+        {
+          "name": "Appoinment History",
+          "link": "/dashboard/patient/appointment-history",
+          "icon": "../logo192.png"
+        },
+        {
+          "name": "Physician Records",
+          "link": "/dashboard/patient/physician-records",
+          "icon": "../logo192.png"
+        },
+        {
+          "name": "Payment Checkout",
+          "link": "/dashboard/patient/payment-checkout",
+          "icon": "../logo192.png"
+        },
+        {
+          "name": "Payment History",
+          "link": "/dashboard/patient/payment-history",
+          "icon": "../logo192.png"
         }
       ],
       "physician_routes": [
         {
           "name": "Dashboard",
-          "link": "/dashboard/physician/dashboard",
+          "link": "/dashboard/physician/physician-dashboard",
+          "icon": "../logo192.png"
+        },
+        {
+          "name": "Schedule Appointment",
+          "link": "/dashboard/physician/schedule-appointment",
+          "icon": "../logo192.png"
+        },
+        {
+          "name": "Appointment History",
+          "link": "/dashboard/physician/appointment-history",
           "icon": "../logo192.png"
         }
       ],
       "admin_routes": [
         {
           "name": "Dashboard",
-          "link": "/dashboard/admin/dashboard",
+          "link": "/dashboard/admin/admin-dashboard",
+          "icon": "../logo192.png"
+        },
+        {
+          "name": "PatientRecords",
+          "link": "/dashboard/admin/patient-records",
+          "icon": "../logo192.png"
+        },
+        {
+          "name": "PhysicianRecords",
+          "link": "/dashboard/admin/physician-records",
+          "icon": "../logo192.png"
+        },
+        {
+          "name": "MasterDataTables",
+          "link": "/dashboard/admin/data-tables",
           "icon": "../logo192.png"
         }
       ]

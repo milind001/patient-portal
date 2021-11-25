@@ -5,6 +5,7 @@ import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import thunk from 'redux-thunk'
 import authReducer from './store/reducer/auth';
 import phyReducer from './store/reducer/phy-lists';
+import mAllergiesReducer from './store/reducer/masterReducer';
 import history from './resources/history';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -16,7 +17,8 @@ const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const rootReducer = combineReducers({
   auth: authReducer,
-  physician: phyReducer
+  physician: phyReducer,
+  mAllergiesReducer: mAllergiesReducer
 }) 
 
 const store = createStore(rootReducer, composeEnhancer(

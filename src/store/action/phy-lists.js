@@ -74,11 +74,11 @@ export const phyEditDemographicData = (userId, userData) => {
     }
 };
 
-export const phyDeleteDemographicData = (userID) => {
-    // console.log('edit action')
+export const phyDeleteDemographicData = (user) => {
+    console.log('edit action', user)
     return dispatch => {
         dispatch(phyStart());
-        axios.delete('/demographics/' + userID)
+        axios.delete('/demographics/' +  user.id)
         .then(res => {
             dispatch(phyFetchDemographicData());
             NotificationManager.success("User Deleted Successfully");

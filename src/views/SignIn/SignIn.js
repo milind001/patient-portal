@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { checkValidity, updateObject } from '../../resources/utility';
 import * as actions from '../../store/action';
 import FormInput from '../../components/FormInput/formInput';
+import { registerNewUser }  from '../../utils/wssConnection/wssConnection';
 import './signin.scss'
 
 
@@ -77,6 +78,7 @@ const inputChangedHandler = (event, controlName) => {
 //submit form
 const submitHandler = e => {
     e.preventDefault();
+    registerNewUser(authForm.email.value);
     dispatch(actions.signin(authForm.email.value, authForm.password.value));
 };
 
